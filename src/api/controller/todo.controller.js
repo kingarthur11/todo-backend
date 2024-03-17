@@ -20,9 +20,6 @@ const filterTodosByStatus = catchAsync(async (req, res) => {
 
 const getOneTodo = catchAsync(async (req, res) => {
   const todo = await todoService.getTodoById(req.params.todo_id);
-  if (!todo) {
-    throw new ApiError(httpStatus.NOT_FOUND, "Todo not found");
-  }
   res.status(httpStatus.OK).json({ message: "Todo retrieved successfully", todo });
 });
 
