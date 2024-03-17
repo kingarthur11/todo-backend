@@ -9,15 +9,23 @@ const todoSchema = mongoose.Schema(
         required: true,
         trim: true,
     },
-    target: {
+    description: {
         type: String,
         required: false,
         default: null,
         trim: true,
     },
     status: {
-      type: Boolean,
-      default: false,
+      type: String,
+      required: false,
+      default: null,
+      trim: true,
+    },
+    category: {
+      type: String,
+      required: false,
+      default: null,
+      trim: true,
     }
   },
   {

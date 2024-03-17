@@ -11,7 +11,11 @@ const createTodo = catchAsync(async (req, res) => {
 const getAllTodo = catchAsync(async (req, res) => {
   const todo = await todoService.getAllTodos();
   res.status(httpStatus.OK).json({ message: "Todo retrieved successfully", todo });
-  // res.send(todo);
+});
+
+const filterTodosByStatus = catchAsync(async (req, res) => {
+  const todo = await todoService.filterTodosByStatus(req.params.status);
+  res.status(httpStatus.OK).json({ message: "Todo retrieved successfully", todo });
 });
 
 const getOneTodo = catchAsync(async (req, res) => {
@@ -28,6 +32,12 @@ const updateTodo = catchAsync(async (req, res) => {
   // res.send(todo);
 });
 
+const updateTodoStatus = catchAsync(async (req, res) => {
+  const todo = await todoService.updateTodoStatus(req.params.todo_id, req.body);
+  res.status(httpStatus.OK).json({ message: "Todo status updated successfully", todo });
+  // res.send(todo);
+});
+
 const deleteTodo = catchAsync(async (req, res) => {
   await todoService.deleteTodo(req.params.todo_id);
   res.json({ message: "Deleted successfully" });
@@ -39,4 +49,6 @@ module.exports = {
   getOneTodo,
   updateTodo,
   deleteTodo,
+  updateTodoStatus,
+  filterTodosByStatus
 };
