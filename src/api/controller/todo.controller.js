@@ -26,13 +26,11 @@ const getOneTodo = catchAsync(async (req, res) => {
 const updateTodo = catchAsync(async (req, res) => {
   const todo = await todoService.updateTodo(req.params.todo_id, req.body);
   res.status(httpStatus.OK).json({ message: "Todo updated successfully", todo });
-  // res.send(todo);
 });
 
 const updateTodoStatus = catchAsync(async (req, res) => {
   const todo = await todoService.updateTodoStatus(req.params.todo_id, req.body);
   res.status(httpStatus.OK).json({ message: "Todo status updated successfully", todo });
-  // res.send(todo);
 });
 
 const deleteTodo = catchAsync(async (req, res) => {
