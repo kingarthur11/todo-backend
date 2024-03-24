@@ -10,6 +10,6 @@ mongoose.connection.on('error', (err) => {
 });
 
 exports.connect = () => {
-  mongoose.connect(mongo.uri);
+  mongoose.connect('mongodb+srv://arthurorduh:U6aCCw7R7utYS0Pv@straitclusta.szp5l6m.mongodb.net/?retryWrites=true&w=majority&appName=Straitclusta');
   return mongoose.connection;
 };

@@ -1,7 +1,7 @@
 const app = require('./config/express');
-// const mongoose = require('./config/mongoose');
+const mongoose = require('./config/mongoose');
 
-// // mongoose.connect();
+mongoose.connect();
 
 // module.exports = app;
 
