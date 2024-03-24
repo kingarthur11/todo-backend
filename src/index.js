@@ -1,11 +1,7 @@
 const app = require('./config/express');
-const mongoose = require('./config/mongoose');
+// const mongoose = require('./config/mongoose');
 
-mongoose.connect();
-
-// module.exports = app;
-
-// app.get("/", (req, res) => res.send("Express on Vercel"));
+// mongoose.connect();
 
 app.listen(3000, () => console.log("Server ready on port 3000."));
 
