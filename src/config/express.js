@@ -2,8 +2,8 @@ const express = require('express');
 const httpStatus = require('http-status');
 const cors = require('cors');
 const routes = require('../api/routes/v1');
-const { errorHandler } = require('../api/middleware/error');
-const ApiError = require('../api/utils/ApiError');
+// const { errorHandler } = require('../api/middleware/error');
+// const ApiError = require('../api/utils/ApiError');
 
 const app = express();
 
