@@ -1,4 +1,4 @@
-// const app = require('./config/express');
+const app = require('./config/express');
 // const mongoose = require('./config/mongoose');
 
 // // mongoose.connect();
@@ -6,8 +6,8 @@
 
 // module.exports = app;
 
-const express = require("express");
-const app = express();
+// const express = require("express");
+// const app = express();
 
 app.get("/", (req, res) => res.send("Express on Vercel"));
 
