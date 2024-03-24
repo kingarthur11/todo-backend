@@ -2,7 +2,7 @@ const { port } = require('./config/vars');
 const app = require('./config/express');
 const mongoose = require('./config/mongoose');
 
-mongoose.connect();
+// mongoose.connect();
 
 app.listen(port, () => console.info(`server started on port ${port}`));
 
