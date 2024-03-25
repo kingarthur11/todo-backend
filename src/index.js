@@ -1,8 +1,11 @@
-const app = require('./config/express');
-const mongoose = require('./config/mongoose');
+const express = require('express');
 
-mongoose.connect();
+const app = express();
 
+app.get('/', (req, res) => {
+    res.send('Welcome to my server!');
+  });
+  
 app.listen(3000, () => console.log("Server ready on port 3000."));
 
 module.exports = app;
